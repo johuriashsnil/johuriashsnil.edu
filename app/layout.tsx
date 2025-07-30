@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export async function generateMetadata({ }: { params: unknown }): Promise<Metadata> {
     return {
-        title: "Kishorgonj Keshba Fazil Madrasha",
+        title: process.env.NEXT_PUBLIC_ENGLISH_TITLE,
         description: "Created by MD. Abdur Rahman Sifat",
     };
 }
@@ -17,21 +17,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en">
-            {/* <head>
-                <Script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-84C4EWC79S"
-                ></Script>
-                <Script id="google-analytics">
-                    {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-84C4EWC79S');
-  `}
-                </Script>
-            </head> */}
             <body>
                 <AuthProvider>
                     <main>{children}</main>

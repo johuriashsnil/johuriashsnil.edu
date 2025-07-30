@@ -10,7 +10,7 @@ interface MetadataParams {
 
 export async function generateMetadata({ }: MetadataParams) {
     return {
-        title: `Kishorgonj Keshba Fazil Madrasha | Home`,
+        title: process.env.NEXT_PUBLIC_ENGLISH_TITLE,
         description: "Created by MD. Abdur Rahman Sifat",
     };
 }

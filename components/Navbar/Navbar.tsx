@@ -7,10 +7,11 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
     const [containerStyle, setContainerStyle] = useState<CSSProperties>({
-        backgroundImage: "url('https://utfs.io/f/9f9783bc-d539-4192-a843-6f733d23a9ac-1zr6n.png')",
-        backgroundColor: "#FEF9C7",
+        backgroundImage: "url('https://nwgj1m91fr.ufs.sh/f/R4IOQGrdFUw1SU1YMy3FtE8UNzjZQPpHTelBswKbcfak4J5o')",
+        backgroundColor: "#77FEF0",
         backgroundSize: '2%',
         backgroundPosition: "bottom",
+        paddingBottom: "40px",
         backgroundRepeat: "repeat-x",
         transition: "background-size 0.5s ease, background-color 0.5s ease",
     });
