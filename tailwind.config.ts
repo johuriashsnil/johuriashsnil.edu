@@ -26,7 +26,8 @@ module.exports = withUt(
                     'berkshire': ['Berkshire Swash', 'cursive'],
                     "nano": ["Noto Sans Bengali", "sans-serif"],
                     "arabic": ["Noto Sans Arabic", "sans-serif"],
-                    "bangla": ["Galada", "cursive"]
+                    "bangla": ["Galada", "cursive"],
+                    "nato": ["Noto Serif Bengali", "serif"]
                 },
                 animation: {
                     'slow-spin': 'slowSpin 10s linear infinite',

@@ -8,7 +8,7 @@ import Link from "next/link";
 const Navbar: React.FC = () => {
     const [containerStyle, setContainerStyle] = useState<CSSProperties>({
         backgroundImage: "url('https://nwgj1m91fr.ufs.sh/f/R4IOQGrdFUw1SU1YMy3FtE8UNzjZQPpHTelBswKbcfak4J5o')",
-        backgroundColor: "#77FEF0",
+        backgroundColor: "#90D5FF",
         backgroundSize: '2%',
         backgroundPosition: "bottom",
         paddingBottom: "40px",
@@ -57,20 +57,20 @@ const Navbar: React.FC = () => {
                 />
             </div>
             <div className="flex-grow text-center w-full md:w-auto mb-4 md:mb-0 transition-all duration-500 ease-in-out">
-                <h1 className="font-bangla">বিসমিল্লাহির রাহমানির রাহিম</h1>
-                <h1 className="text-lg md:text-2xl mt-1 font-bold font-bangla transition-all duration-500 ease-in-out">
+                <h1 className="font-nato">বিসমিল্লাহির রাহমানির রাহিম</h1>
+                <h1 className="text-lg md:text-2xl mt-1 font-bold font-nato transition-all duration-500 ease-in-out">
                     {process.env.NEXT_PUBLIC_BANGLA_TITLE}
                 </h1>
-                <h1 className="text-xl md:text-2xl font-black transition-all duration-500 ease-in-out">
+                <h1 className="text-xl md:text-2xl font-black font-sans transition-all duration-500 ease-in-out">
                     {process.env.NEXT_PUBLIC_ENGLISH_TITLE}
                 </h1>
-                <p className="font-bangla transition-all duration-500 ease-in-out">
+                <p className=" transition-all duration-500 font-nato ease-in-out">
                     {process.env.NEXT_PUBLIC_ADDRESS_LINE1}
                 </p>
-                <p className="font-bangla transition-all duration-500 ease-in-out">
+                <p className="font-nato transition-all duration-500 ease-in-out">
                     {process.env.NEXT_PUBLIC_ADDRESS_LINE2}
                 </p>
-                <p className="font-bangla transition-all duration-500 ease-in-out">
+                <p className="font-nato transition-all duration-500 ease-in-out">
                     {process.env.NEXT_PUBLIC_ADDRESS_LINE3}
                 </p>
             </div>
@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
                             </button>
                         </Link>
                     </div>
-                    <h1 className="text-black font-bangla col-span-3 text-center">Contact US: 01794803612</h1>
+                    <h1 className="text-black font-sans col-span-3 text-center">Contact US: {process.env.NEXT_PUBLIC_NOTICE_CONTACT}</h1>
                 </div>
             </div>
         </div>
