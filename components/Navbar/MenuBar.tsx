@@ -51,7 +51,7 @@ function NavListMenu({ data }: NavListMenuProps) {
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-bold text-black Navbar"
+                            className="flex items-center gap-2 py-2 pr-4 font-bold text-black general"
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                        >
                             {buttons?.buttonName}
@@ -94,7 +94,7 @@ function NavListMenu({ data }: NavListMenuProps) {
 function NavList() {
     const session = useSession();
     return (
-        <List className="mb-6 mt-4 p-0 lg:mb-0 lg:mt-0 lg:flex-row lg:p-1 Navbar" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+        <List className="mb-6 mt-4 p-0 lg:mb-0 lg:mt-0 lg:flex-row lg:p-1 general" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <Typography as="a" href="/" variant="small" color="blue-gray" className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                 <ListItem className="flex items-center gap-2 py-2 pr-4" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                     Home <FaHouseMedical />
@@ -186,7 +186,7 @@ export default function MenuBar() {
     }, []);
 
     return (
-        <Navbar className="max-w-full py-2 Navbar" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+        <Navbar className="max-w-full py-2 general" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
             <div className="flex items-center justify-between text-blue-gray-900">
                 <div className="hidden lg:block">
                     <NavList />
