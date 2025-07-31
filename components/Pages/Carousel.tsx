@@ -7,10 +7,10 @@ import UseLoader from "../Loader/useLoader";
 import Image from "next/image";
 
 interface Image {
-    imageUrl: string;
+    img: string;
     title: string;
+    des: string;
 }
-
 export function CarouselDefault() {
     const [images, setImages] = useState<Image[]>([]);
     const [loadingIndicator, startLoading, stopLoading] = UseLoader();
@@ -21,7 +21,12 @@ export function CarouselDefault() {
             startLoading(); // Show loading indicator
             try {
                 const response = await axios.get<Image[]>(`${BaseURL}/api/images`);
-                setImages(response.data);
+
+                if (response.data.length <= 4) {
+                    setImages(response.data);
+                } else {
+                    setImages(response.data.slice(-4));
+                }
             } catch (err) {
                 console.error(err);
             } finally {
@@ -38,17 +43,17 @@ export function CarouselDefault() {
                 <Carousel
                     loop={true}
                     autoplay={true}
-                    className="rounded-xl w-fit  max-h-[450px] mb-4 overflow-hidden" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                >
+                    className="rounded-xl w-full  max-h-[450px] mb-4 overflow-hidden" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                >
                     {images.map((image, index) => (
 
                         <Image
                             key={index}
-                            src={image?.imageUrl}
+                            src={image?.img}
                             alt={image?.title}
                             width={1000}
                             height={1}
                             loading="eager"
-                            blurDataURL={image?.imageUrl}
+                            blurDataURL={image?.img}
                             style={{ objectFit: "cover" }}
                             className="h-full w-full"
                         />

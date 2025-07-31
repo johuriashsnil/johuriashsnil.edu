@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
                 <h1 className="text-lg md:text-2xl mt-1 font-bold font-nato transition-all duration-500 ease-in-out">
                     {process.env.NEXT_PUBLIC_BANGLA_TITLE}
                 </h1>
-                <h1 className="text-xl md:text-2xl font-black font-sans transition-all duration-500 ease-in-out">
+                <h1 className="text-xl md:text-2xl font-black  transition-all duration-500 ease-in-out">
                     {process.env.NEXT_PUBLIC_ENGLISH_TITLE}
                 </h1>
                 <p className=" transition-all duration-500 font-nato ease-in-out">
@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
                             </button>
                         </Link>
                     </div>
-                    <h1 className="text-black font-sans col-span-3 text-center">Contact US: {process.env.NEXT_PUBLIC_NOTICE_CONTACT}</h1>
+                    <h1 className="text-black font-nato col-span-3 text-center">Contact US: {process.env.NEXT_PUBLIC_NOTICE_CONTACT}</h1>
                 </div>
             </div>
         </div>

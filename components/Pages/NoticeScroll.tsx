@@ -87,7 +87,7 @@ const ScrollNotice: React.FC = () => {
             : notices.filter((n) => n.category === selectedCategory);
 
     return (
-        <main className="p-4 h-[500px]">
+        <main className="p-4 h-[500px] font-nato">
             <div className="flex items-center justify-between gap-4 mb-2">
                 <button className="text-2xl">Notice Board</button>
                 <Link href="/notices">

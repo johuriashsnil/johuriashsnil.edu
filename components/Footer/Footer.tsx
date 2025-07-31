@@ -88,9 +88,10 @@ const Footer: FC = () => {
                         <div>
                             <h1 className="text-xl font-semibold mt-4">ঠিকানা</h1>
                             <p className="text-white">
-                                কিশোরগঞ্জ কেশব ফাজিল মাদ্রাসা, কিশোরগঞ্জ, নীলফামারী
+                                {process.env.NEXT_PUBLIC_BANGLA_TITLE} <br />
+                                {process.env.NEXT_PUBLIC_ADDRESS_LINE1}
                             </p>
-                            <p className="text-white">মোবাইল: ০১৭৯৪৮০৩৬১২</p>
+                            <p className="text-white">মোবাইল: {process.env.NEXT_PUBLIC_NOTICE_CONTACT}</p>
                         </div>
                     </div>
                 </div>
