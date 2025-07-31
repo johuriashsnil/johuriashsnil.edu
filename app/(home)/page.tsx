@@ -63,7 +63,7 @@ const Home: React.FC = () => {
                 <Running_Banner />
                 <Banner />
                 <MapSection />
-                <div className="flex font-nato flex-col md:flex-row items-center justify-evenly lg:w-1/2 mt-4 md:mt-10 gap-4 md:gap-2">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2 font-nato mt-4 md:mt-10 items-start justify-evenly">
                     {UserData.length > 0
                         ? UserData.map((item, index) => (
                             <div key={index}>
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
                                         <span className="inline-block pb-2 ">
                                             {item?.designation.slice(
                                                 0,
-                                                item?.designation.indexOf(" ")
+                                                item?.designation.indexOf(",")
                                             )}
                                         </span>
                                     </p>

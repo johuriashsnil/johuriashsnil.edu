@@ -98,10 +98,11 @@ export function UploadSection() {
                         onChange={(val) => setCategory(val || "")} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                    >
                         <Option value="সকল">সকল</Option>
                         <Option value="সষ্ঠ">সষ্ঠ</Option>
-                        <Option value="সপ্তপ">সপ্তপ</Option>
+                        <Option value="সপ্তম">সপ্তম</Option>
                         <Option value="অষ্টম">অষ্টম</Option>
                         <Option value="নবম">নবম</Option>
                         <Option value="দশম">দশম</Option>
+                        <Option value="পরীক্ষার্থী">পরীক্ষার্থী</Option>
                     </Select>
 
                     {/* PDF Upload */}
