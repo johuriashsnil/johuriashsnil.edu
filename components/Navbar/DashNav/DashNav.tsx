@@ -153,6 +153,19 @@ const DashNav: FC = () => {
                             <FaPhotoFilm /> {isClicked ? "" : "Principal's Message"}
                         </DashNavButton>
                     </Link>
+                    <Link
+                        href={"/dashboard/academic"}
+                        className="flex justify-center items-center"
+                    >
+                        <DashNavButton
+                            onClick={() => { }}
+                            className={`flex justify-start items-center  text-lg font-semibold gap-3 duration-500 btn glass w-full  ${isClicked && "btn glass"
+                                } ${pathname === "/dashboard/principle" && "bg-transparent text-black"
+                                }`}
+                        >
+                            <FaPhotoFilm /> {isClicked ? "" : "Academic Update"}
+                        </DashNavButton>
+                    </Link>
                 </div>
 
                 <div className="p-3">

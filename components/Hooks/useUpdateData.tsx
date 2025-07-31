@@ -67,7 +67,7 @@ export const UseUpdateData: FC<UseUpdateDataProps> = ({ data }) => {
                     onClick={(e) => e.stopPropagation()}
                     className={`absolute w-full rounded-lg bg-white dark:bg-gray-900 drop-shadow-2xl sm:w-[500px] ${openModal ? "opacity-1 translate-y-0 duration-300" : "-translate-y-20 opacity-0 duration-150"}`}
                 >
-                    <form className="px-5 pb-5 pt-3 lg:pb-10 lg:pt-5 lg:px-10">
+                    <form className="px-5 pb-5 pt-3 lg:pb-10 lg:pt-5 lg:px-10 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800 max-h-[90vh] overflow-y-auto">
                         <svg
                             onClick={() => setOpenModal(false)}
                             className="mx-auto mr-0 w-10 cursor-pointer fill-black dark:fill-white"
@@ -135,13 +135,17 @@ export const UseUpdateData: FC<UseUpdateDataProps> = ({ data }) => {
                                 Update Message
                             </label>
                             <div className="relative">
-                                <input
+                                <textarea
                                     id="message_navigate_ui_modal"
-                                    type="text"
                                     placeholder={data?.message}
-                                    onChange={(e: ChangeEvent<HTMLInputElement>) => setMessage(e.target.value)}
+                                    onChange={(e) => {
+                                        setMessage(e.target.value);
+                                        e.target.style.height = 'auto';
+                                        e.target.style.height = `${e.target.scrollHeight}px`;
+                                    }}
                                     defaultValue={data?.message}
-                                    className="block w-full rounded-lg p-3 pl-10 outline-none drop-shadow-lg bg-white dark:bg-gray-700 dark:text-white"
+                                    className="block w-full rounded-lg p-3 pl-10 outline-none drop-shadow-lg bg-white dark:bg-gray-700 dark:text-white resize-none overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800"
+                                    rows={1}
                                 />
                                 <span className="absolute left-2 top-1/4">
                                     <FaMessage className="text-xl" />

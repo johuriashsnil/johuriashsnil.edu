@@ -9,7 +9,7 @@ const Results = () => {
                 style={{ width: '100%', height: '100%', border: 'none' }}
                 title="Education Board Results"
                 onError={(e) => {
-                    e.currentTarget.src = "https://kkfm.vercel.app/";
+                    e.currentTarget.src = "https://johuriashsniledu.vercel.app/";
                 }}
             ></iframe>
         </div>

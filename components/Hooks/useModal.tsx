@@ -20,7 +20,7 @@ export default function Modal1({ data }: ModalProps) {
     return (
         <div className="mx-auto w-fit" onClick={() => setOpenModal(true)}>
             <div
-                className="relative w-64 h-[300px] overflow-hidden rounded-lg focus:outline-none"
+                className="relative w-36 h-[150px] lg:w-48 lg:h-[300px] xl:w-64  overflow-hidden rounded-lg focus:outline-none"
                 aria-label="View Principal's Message"
             >
                 <Image
@@ -31,11 +31,11 @@ export default function Modal1({ data }: ModalProps) {
                     className="w-full h-full "
                 />
                 <div className="absolute h-2/3 top-1/3  ease-in-out inset-0 bg-black bg-opacity-70 opacity-0 hover:opacity-70 flex flex-col items-center justify-center transition-opacity duration-400">
-                    <p className="text-white text-lg font-bold">{data?.role} Message</p>
+                    <p className="text-white text-sm lg:text-lg font-bold">{data?.role} Message</p>
                     <div className="mt-2">
                         <button
                             onClick={() => setOpenModal(true)}
-                            className="flex items-center gap-1 px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600"
+                            className="flex items-center gap-1 px-4 py-2 text-sm lg:text-lg  text-white bg-blue-500 rounded-md hover:bg-blue-600"
                         >
                             <FaMagnifyingGlass />
                             <span>View Message</span>
