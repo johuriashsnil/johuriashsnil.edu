@@ -9,7 +9,7 @@ export function CustomCalendar() {
 
 
     return (
-        <div className="calendar-container">
+        <div className="calendar-container font-nato">
             <Calendar
                 value={value}
                 className="dark-calendar shadow-lg"

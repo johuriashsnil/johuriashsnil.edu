@@ -42,10 +42,10 @@ const Dashboard: React.FC = () => {
             {data.length > 0 ? (
                 <div className="w-3/4 lg:w-1/2 mx-auto mt-10">
                     <DashboardGraph data={chartData} />
-                    <p className="text-center mt-4 text-2xl">Madrasha Database Information</p>
+                    <p className="text-center mt-4 text-2xl ">{process.env.NEXT_PUBLIC_ENGLISH_TITLE} Database Information</p>
                 </div>
             ) : (
-                <p></p>
+                <p>NO DATA AVAILABLE</p>
             )}
         </div>
     );

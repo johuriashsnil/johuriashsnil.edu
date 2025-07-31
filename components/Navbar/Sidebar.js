@@ -32,7 +32,7 @@ export function MultiLevelSidebar() {
     };
 
     return (
-        <Card className="h-[calc(100vh)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 Navbar">
+        <Card className="h-[calc(100vh)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 Navbar font-nato">
             <div className="mb-2 p-4">
                 <Typography variant="h5" color="blue-gray">
                     Admin Panel

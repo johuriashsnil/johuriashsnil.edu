@@ -45,7 +45,7 @@ const LoginForm: React.FC = () => {
     };
 
     return (
-        <section className="flex flex-col md:flex-row h-screen items-center">
+        <section className="flex flex-col md:flex-row h-screen items-center font-nato">
             <div className="Navbar hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
                 <Lottie
                     style={{ height: "90vh", marginTop: "90px" }}
@@ -60,8 +60,8 @@ const LoginForm: React.FC = () => {
                 <section className="w-full h-100">
                     <div className="flex items-center justify-center">
                         <p className="text-center text-3xl">
-                            <span className="text-3xl font-black">
-                                কিশোরগঞ্জ কেশবা ফাজিল মাদরাসা
+                            <span className="text-3xl font-black font-nato">
+                                {process.env.NEXT_PUBLIC_BANGLA_TITLE}
                             </span>
                         </p>
                     </div>
