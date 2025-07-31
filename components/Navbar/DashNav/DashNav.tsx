@@ -24,7 +24,7 @@ const DashNav: FC = () => {
     const pathname = usePathname();
 
     return (
-        <div data-testid="parent" className={isClicked ? "lg:w-16" : "lg:w-72" + "font-nato"}>
+        <div data-testid="parent" className={isClicked ? "lg:w-16" : "lg:w-72"}>
             <div
                 className={`hidden lg:flex fixed justify-between Navbar min-h-screen flex-col transition-all duration-300 ${isClicked ? "w-20" : "w-72"
                     }`}
@@ -58,7 +58,7 @@ const DashNav: FC = () => {
                             <div className="flex items-center">
                                 <p className="text-center text-3xl">
                                     <span
-                                        className="text-3xl font-black font-nato"
+                                        className="text-3xl font-black"
                                         style={{
                                             color: "white",
                                             WebkitTextFillColor: "black",
@@ -80,7 +80,7 @@ const DashNav: FC = () => {
                     >
                         <DashNavButton
                             onClick={() => { }}
-                            className={`flex justify-start items-center text-lg font-semibold font-nato gap-3 duration-500 btn glass b w-full  ${isClicked && "btn glass"
+                            className={`flex justify-start items-center text-lg font-semibold gap-3 duration-500 btn glass b w-full  ${isClicked && "btn glass"
                                 } ${pathname === "/dashboard" && "bg-transparent text-black"}`}
                         >
                             <FaSquarePollVertical />
@@ -89,11 +89,11 @@ const DashNav: FC = () => {
                     </Link>
                     <Link
                         href={"/dashboard/noticeUpload"}
-                        className="flex justify-center items-center font-nato"
+                        className="flex justify-center items-center"
                     >
                         <DashNavButton
                             onClick={() => { }}
-                            className={`flex justify-start items-center0 text-lg font-semibold font-nato gap-3 duration-500 btn glass  w-full  ${isClicked && "btn glass"
+                            className={`flex justify-start items-center0 text-lg font-semibold gap-3 duration-500 btn glass  w-full  ${isClicked && "btn glass"
                                 } ${pathname === "/dashboard/noticeUpload" && "bg-transparent text-black"}`}
                         >
                             <FaPlus />
@@ -103,7 +103,7 @@ const DashNav: FC = () => {
 
                     <Link
                         href={"/dashboard/eventsUpload"}
-                        className="flex justify-center items-center font-nato"
+                        className="flex justify-center items-center"
                     >
                         <DashNavButton
                             onClick={() => { }}
@@ -116,7 +116,7 @@ const DashNav: FC = () => {
 
                     <Link
                         href={"/dashboard/gallery"}
-                        className="flex justify-center items-center font-nato"
+                        className="flex justify-center items-center"
                     >
                         <DashNavButton
                             onClick={() => { }}
@@ -129,7 +129,7 @@ const DashNav: FC = () => {
                     </Link>
                     <Link
                         href={"/dashboard/routineUpload"}
-                        className="flex justify-center items-center font-nato"
+                        className="flex justify-center items-center"
                     >
                         <DashNavButton
                             onClick={() => { }}
@@ -142,7 +142,7 @@ const DashNav: FC = () => {
                     </Link>
                     <Link
                         href={"/dashboard/principle"}
-                        className="flex justify-center items-center font-nato"
+                        className="flex justify-center items-center"
                     >
                         <DashNavButton
                             onClick={() => { }}
@@ -159,7 +159,7 @@ const DashNav: FC = () => {
                     <Link href={"/"}>
                         <DashNavButton
                             onClick={() => { }}
-                            className="w-full font-nato flex justify-start items-center text-lg font-semibold gap-3 duration-500 btn glass">
+                            className="w-full flex justify-start items-center text-lg font-semibold gap-3 duration-500 btn glass">
                             {isClicked ? (
                                 <FaHouse />
                             ) : (
@@ -171,7 +171,7 @@ const DashNav: FC = () => {
                     </Link>
                     <DashNavButton
                         onClick={() => signOut()}
-                        className="w-full mt-2 flex justify-start items-center text-lg font-semibold gap-3 duration-500 btn glass font-nato"
+                        className="w-full mt-2 flex justify-start items-center text-lg font-semibold gap-3 duration-500 btn glass"
                     >
                         {isClicked ? (
                             <FaArrowRightFromBracket />

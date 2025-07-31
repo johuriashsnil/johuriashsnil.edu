@@ -104,8 +104,8 @@ const Page: React.FC = () => {
             {loadingIndicator}
 
             {filteredData.length > 0 ? (
-                <Card className="w-full overflow-scroll Navbar" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-                    <table className="w-full min-w-max table-auto text-left">
+                <Card className=" mx-auto overflow-scroll Navbar" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                    <table className=" table-auto text-left">
                         <thead>
                             <tr>
                                 {TABLE_HEAD.map((head) => (
@@ -133,7 +133,7 @@ const Page: React.FC = () => {
                                             <FaFilePdf className="text-red-400 text-3xl" />
                                         </Link>
                                     </td>
-                                    <td className="p-4">{time}</td>
+                                    <td className="p-4 text-wrap ">{time}</td>
                                     <td className="p-4">{category}</td>
                                     <td className="p-4 flex gap-4">
                                         <Button onClick={() => handleDeleteNotice(_id)} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
