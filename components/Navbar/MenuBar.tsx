@@ -124,6 +124,11 @@ function NavList() {
                     Notices
                 </ListItem>
             </Typography>
+            <Typography as="a" href="/employees" variant="small" color="blue-gray" className="font-bold" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                <ListItem className="flex items-center gap-2 py-2 pr-4" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                    Employees
+                </ListItem>
+            </Typography>
             <NavListMenu
                 data={{
                     buttonName: "Routine",

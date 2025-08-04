@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 const Banner = dynamic(() => import("@/components/Pages/Banner"));
 const MapSection = dynamic(() => import("@/components/Pages/MapSection"));
 const Running_Banner = dynamic(() => import("@/components/Pages/Marquee"), { ssr: false });
-const Modal1 = dynamic(() => import("@/components/Hooks/useModal"));
+const InfoModal = dynamic(() => import("@/components/Pages/InfoModal"));
 import UseLoader from "@/components/Loader/useLoader";
 const TransitionEffects = dynamic(() => import("@/components/TransitionEffects"));
 
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
                                     </p>
                                     <div className="absolute bottom-0 left-0 w-full h-1 border-b-2 border-green-600 rounded-b-full"></div>
                                 </div>
-                                <Modal1 data={item} />
+                                <InfoModal data={item} />
                             </div>
                         ))
                         : loadingIndicator}

@@ -41,8 +41,26 @@ const Navbar: React.FC = () => {
             window.removeEventListener('resize', updateBackgroundSize);
         };
     }, []);
+    const [currentTime, setCurrentTime] = useState<string>("");
+    useEffect(() => {
+        const updateTime = () => {
+            const now = new Date();
+            const options: Intl.DateTimeFormatOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true,
+            };
+            setCurrentTime(now.toLocaleTimeString('en-US', options));
+        };
 
-    const year = new Date().getFullYear();
+        updateTime();
+        const intervalId = setInterval(updateTime, 1000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
+    // const year = new Date().getFullYear();
     return (
         <div
             className="container-fluid bgImage px-2 lg:px-20 flex  flex-wrap items-center justify-center md:justify-between p-4 transition-all duration-500 ease-in-out"
@@ -102,35 +120,12 @@ const Navbar: React.FC = () => {
                                 </span>
                             </button>
                         </Link>
-                        <Link href="https://xiclassadmission.gov.bd/" className="hidden md:flex">
-                            <button className="Btn-Container md:mt-4 lg:mt-0">
-                                <span className="text">
-                                    Xi Class Admission {year}-{year + 1}{" "}
-                                </span>
-                                <span className="icon-Container">
-                                    <svg
-                                        width="16"
-                                        height="19"
-                                        viewBox="0 0 16 19"
-                                        fill="nones"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
-                                        <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
-                                        <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
-                                        <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
-                                        <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
-                                        <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
-                                        <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
-                                        <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
-                                        <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
-                                        <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
-                                    </svg>
-                                </span>
-                            </button>
-                        </Link>
+
                     </div>
                     <h1 className="text-black font-nato col-span-3 text-center">Contact US: {process.env.NEXT_PUBLIC_NOTICE_CONTACT}</h1>
+                    <h1 className="text-black font-nato col-span-3 text-center text-xl lg:text-2xl">
+                        {currentTime}
+                    </h1>
                 </div>
             </div>
         </div>

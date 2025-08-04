@@ -97,7 +97,7 @@ export function UploadSection() {
                         value={category}
                         onChange={(val) => setCategory(val || "")} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                    >
                         <Option value="সকল">সকল</Option>
-                        <Option value="সষ্ঠ">সষ্ঠ</Option>
+                        <Option value="ষষ্ঠ">ষষ্ঠ</Option>
                         <Option value="সপ্তম">সপ্তম</Option>
                         <Option value="অষ্টম">অষ্টম</Option>
                         <Option value="নবম">নবম</Option>
