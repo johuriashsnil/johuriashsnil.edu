@@ -116,7 +116,7 @@ export default function UpdateEmployeeModal({ open, handleOpen, employee }: Upda
                         <option value="Assistant Head Teacher">Assistant Head Teacher</option>
                         <option value="Assistant Teacher">Assistant Teacher</option>
                         <option value="Office Assistant">Office Assistant</option>
-                        <option value="4rth Class Employee">4rth Class Employee</option>
+                        <option value="4th Class Employee">4th Class Employee</option>
                     </select>
                     <Input
                         label="Contact No"
