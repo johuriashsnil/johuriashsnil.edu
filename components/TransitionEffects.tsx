@@ -19,7 +19,7 @@ const TransitionEffects: React.FC = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
             >
                 <motion.img
-                    src="https://nwgj1m91fr.ufs.sh/f/R4IOQGrdFUw1blve4XUXIL7ucAgfxb2PBOF1ERyqWl6N9rQi"
+                    src="https://nwgj1m91fr.ufs.sh/f/R4IOQGrdFUw15QgIPEiwE921VjNH4FOgdZyDvxiGlPh03Atk"
                     alt="Center Image"
                     width={"50%"}
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
