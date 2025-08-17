@@ -20,13 +20,13 @@ export const POST = async (req) => {
             await user.create(database)
             return new NextResponse("Task successfully created", { status: 200 })
         } catch (error) {
-            console.log(error)
+            // console.log(error)
             return new NextResponse(error, { status: 500 })
 
         }
 
     } catch (error) {
-        console.log(error)
-        return new NextResponse("Internal Server Error", { status: 500 })
+        // console.log(error)
+        return new NextResponse("Internal Server Error" + error, { status: 500 })
     }
 }

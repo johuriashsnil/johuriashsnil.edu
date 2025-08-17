@@ -12,7 +12,7 @@ export function middleware(request) {
     // Use the appropriate token depending on the environment
     const token = process.env.NODE_ENV === "production" ? secureToken : localToken;
 
-    console.log("Token:", token);
+    // console.log("Token:", token);
 
     if (isPublicPath && token) {
         return NextResponse.redirect(new URL("/dashboard", request.nextUrl));

@@ -10,8 +10,7 @@ export const DELETE = async (request, { params }) => {
         await noticePdf.findByIdAndDelete(id)
         return NextResponse.json("Item Deleted", { status: 200 })
     } catch (error) {
-        console.log(error)
-        return new NextResponse("Internal Server Error", { status: 500 });
+        return new NextResponse("Internal Server Error" + error, { status: 500 });
     }
 }
 
@@ -22,7 +21,6 @@ export const GET = async (request, { params }) => {
         const getEvent = await noticePdf.findById(id)
         return NextResponse.json(getEvent, { status: 200 })
     } catch (error) {
-        console.log(error)
-        return new NextResponse("Internal Server Error", { status: 500 });
+        return new NextResponse("Internal Server Error" + error, { status: 500 });
     }
 }

@@ -30,7 +30,6 @@ const Page: React.FC = () => {
             startLoading(); // Show loading indicator
             try {
                 const response = await axios.get(`${BaseURL}/api/academic`);
-                console.log(response.data)
                 setData(response.data);
             } catch (err) {
                 console.error(err);

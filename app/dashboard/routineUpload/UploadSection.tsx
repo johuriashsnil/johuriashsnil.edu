@@ -23,7 +23,6 @@ export function UploadSection() {
 
     const time = new Date().toLocaleDateString();
 
-    console.log(title)
 
 
     const handlePublishRoutine = async (e: React.FormEvent) => {

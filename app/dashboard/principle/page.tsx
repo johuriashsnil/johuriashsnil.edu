@@ -35,7 +35,6 @@ const Principle: React.FC = () => {
         fetchData(); // Only called once due to empty dependency array
     }, [startLoading, stopLoading]);
 
-    console.log(data);
 
     return (
         <>
