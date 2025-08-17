@@ -24,8 +24,6 @@ export function UploadAcademicDataSection() {
 
     const time = new Date().toLocaleDateString();
 
-    console.log(title)
-
 
     const handlePublishAcademicData = async (e: React.FormEvent) => {
         e.preventDefault();

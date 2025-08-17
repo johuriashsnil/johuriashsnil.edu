@@ -6,11 +6,9 @@ import { NextResponse } from "next/server";
 export const GET = async (request, { params }) => {
     const { id } = params;
     const title = id;
-    console.log(title)
     const query = { title: title };
     await connect();
     const data = await academicPDF.find(query);
-    console.log(data)
     return new NextResponse(JSON.stringify(data), {
         status: 200,
         headers: {
