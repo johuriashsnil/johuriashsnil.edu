@@ -1,6 +1,6 @@
 # School Management System
 
-A comprehensive school management web application built with Next.js, featuring academic resources, notices, routines, and an admin dashboard.
+A comprehensive school management web application built with Next.js, featuring academic resources, notices, routines, and an admin dashboard.....
 
 ## Project Structure
 
